@@ -1,0 +1,329 @@
+/* Reset Básico */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+/* Header */
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('background.png') no-repeat center center; /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    height: 200px; /* Altura inicial */
+}
+
+/* Responsividade da header */
+@media (max-width: 768px) {
+    .header {
+        height: 150px; /* Diminui a altura em telas menores */
+        flex-direction: column; /* Alinha o conteúdo verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 120px; /* Altura menor para celulares */
+    }
+
+    .header-text h1 {
+        font-size: 1.2rem; /* Reduz o tamanho do título */
+    }
+
+    .header-text p {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+    }
+}
+
+/* Estilo da logo */
+.logo-container {
+    flex-shrink: 0; /* Impede a logo de encolher */
+}
+
+.logo {
+    width: 50px; /* Tamanho da logo ajustado */
+    height: auto;
+    border-radius: 50%; /* Deixa a logo circular (opcional) */
+    margin-right: 10px;
+}
+
+/* Texto na header */
+.header-text {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.header-text h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+}
+
+
+/* Estilo da seção de detalhes */
+.details {
+    max-width: 600px; /* Define uma largura máxima */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.details h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #8b0000;
+    text-align: center; /* Centraliza o título */
+}
+
+.details ul {
+    list-style: none; /* Marcadores visíveis e alinhados dentro */
+    padding-left: 0; /* Espaçamento para evitar colagem na borda */
+    line-height: 1.6; /* Melhora o espaçamento entre as linhas */
+    margin-bottom: 20px;
+}
+
+.details ul li {
+    font-size: 1rem;
+    color: #333;
+    padding-left: 10px;
+}
+
+/* Estilo dos botões */
+.details .btn {
+    display: inline-block;
+    margin: 5px 10px; /* Espaçamento entre botões */
+    padding: 10px 20px;
+    background-color: #8b0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.details .btn:hover {
+    background-color: #a00000;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .details {
+        padding: 15px;
+    }
+
+    .details ul {
+        padding-left: 10px;
+    }
+
+    .details .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+/* Seção de Benefícios */
+.benefits-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Alinhamento do texto */
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+}
+
+.benefits-section h2 {
+    margin-bottom: 15px;
+    color: #8b0000;
+}
+
+.benefits-section ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    padding: 0;
+}
+
+.benefits-section p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Seção de Contato */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Alinhamento do texto */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.contact-section h2 {
+    margin-bottom: 15px;
+    color: #8b0000;
+}
+
+.contact-section p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Seção dos Kits */
+.kits {
+    padding: 20px;
+    text-align: center;
+}
+
+.kits h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #8b0000;
+}
+
+.kits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo de Cada Kit */
+.kit {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.kit:hover {
+    transform: translateY(-5px);
+}
+
+.kit img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.kit h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.kit p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.kit .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8b0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.kit .btn:hover {
+    background-color: #a00000;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Query para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .kits-container {
+        flex-direction: column; /* Kits em uma coluna */
+        align-items: center;
+    }
+
+    .kit {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        margin-bottom: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .kits h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .kit {
+        width: 100%; /* Ocupa 100% da tela */
+        padding: 15px;
+    }
+
+    .kit h3 {
+        font-size: 1.2rem;
+    }
+
+    .kit p {
+        font-size: 0.9rem;
+    }
+
+    .kit .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
