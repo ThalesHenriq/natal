@@ -13,41 +13,16 @@
         }
 
         header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: url('background.png') no-repeat center center; /* Imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    color: #fff;
-    padding: 20px;
-    text-align: left;
-    height: 200px; /* Altura inicial */
-}
-
-/* Responsividade da header */
-    @media (max-width: 768px) {
-    .header {
-        height: 150px; /* Diminui a altura em telas menores */
-        flex-direction: column; /* Alinha o conteúdo verticalmente */
-        text-align: center; /* Centraliza o texto */
-    }
-}
-
-   @media (max-width: 480px) {
-    .header {
-        height: 120px; /* Altura menor para celulares */
-    }
-
-    .header-text h1 {
-        font-size: 1.2rem; /* Reduz o tamanho do título */
-    }
-
-    .header-text p {
-        font-size: 0.9rem; /* Reduz o tamanho do texto */
-    }
-}
-
-
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: url('background.png') no-repeat center center; /* Imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir toda a área */
+            color: #fff;
+            padding: 20px;
+            text-align: left;
+            height: 200px; /* Altura inicial */
+        }
         main {
             max-width: 800px;
             margin: 20px auto;
@@ -77,12 +52,14 @@
             border: 1px solid #ddd;
             border-radius: 6px;
             background-color: #f9f9f9;
+            flex-wrap: wrap;
         }
 
         .store h3 {
             margin: 0;
             font-size: 1.2rem;
             color: #333;
+            flex: 1;
         }
 
         .store button {
@@ -94,6 +71,7 @@
             font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            flex-shrink: 0;
         }
 
         .store button:hover {
@@ -106,61 +84,24 @@
             font-size: 0.9rem;
             color: #555;
         }
-                @media (max-width: 768px) {
-    .kits-container {
-        flex-direction: column; /* Kits em uma coluna */
-        align-items: center;
-    }
 
-    .kit {
-        width: 90%; /* Ocupa quase toda a largura da tela */
-        margin-bottom: 20px;
-    }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .store {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    .header h1 {
-        font-size: 1.8rem;
-    }
+            .store h3 {
+                margin-bottom: 10px;
+                text-align: left;
+            }
 
-    .header p {
-        font-size: 1rem;
-    }
+            .store button {
+                width: 100%;
+            }
+        }
 
-    .kits h2 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .kit {
-        width: 100%; /* Ocupa 100% da tela */
-        padding: 15px;
-    }
-
-    .kit h3 {
-        font-size: 1.2rem;
-    }
-
-    .kit p {
-        font-size: 0.9rem;
-    }
-
-    .kit .btn {
-        font-size: 0.9rem;
-        padding: 8px 15px;
-    }
-
-    .header h1 {
-        font-size: 1.5rem;
-    }
-
-    .header p {
-        font-size: 0.9rem;
-    }
-
-    footer {
-        font-size: 0.8rem;
-    }
-}
     </style>
 </head>
 <body>
@@ -172,17 +113,16 @@
         <h2>Selecione a Loja</h2>
         <div class="store-selection">
             <div class="store">
-            <div class="store">
-                <h3>Loja Aeroporto</h3>
+                <h3>Loja Centro</h3>
                 <button onclick="openWhatsApp('5516999481001', 'Cesta de Natal')">Falar no WhatsApp</button>
             </div>
             <div class="store">
                 <h3>Loja Norte</h3>
-                <button onclick="openWhatsApp('', 'Cesta Econômica')">Falar no WhatsApp</button>
+                <button onclick="openWhatsApp('555188888888', 'Cesta Econômica')">Falar no WhatsApp</button>
             </div>
             <div class="store">
                 <h3>Loja Sul</h3>
-                <button onclick="openWhatsApp('', 'Cesta Gourmet')">Falar no WhatsApp</button>
+                <button onclick="openWhatsApp('555177777777', 'Cesta Gourmet')">Falar no WhatsApp</button>
             </div>
         </div>
     </main>
