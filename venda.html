@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha sua Loja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('background.png') no-repeat center center; /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    height: 200px; /* Altura inicial */
+}
+
+/* Responsividade da header */
+    @media (max-width: 768px) {
+    .header {
+        height: 150px; /* Diminui a altura em telas menores */
+        flex-direction: column; /* Alinha o conteúdo verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+   @media (max-width: 480px) {
+    .header {
+        height: 120px; /* Altura menor para celulares */
+    }
+
+    .header-text h1 {
+        font-size: 1.2rem; /* Reduz o tamanho do título */
+    }
+
+    .header-text p {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+    }
+}
+
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .store-selection {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .store {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+
+        .store h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .store button {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .store button:hover {
+            background-color: #1da955;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <main>
+        <h2>Selecione a Loja</h2>
+        <div class="store-selection">
+            <div class="store">
+                <h3>Loja Centro</h3>
+                <button onclick="openWhatsApp('555199999999', 'Cesta Premium')">Falar no WhatsApp</button>
+            </div>
+            <div class="store">
+                <h3>Loja Norte</h3>
+                <button onclick="openWhatsApp('555188888888', 'Cesta Econômica')">Falar no WhatsApp</button>
+            </div>
+            <div class="store">
+                <h3>Loja Sul</h3>
+                <button onclick="openWhatsApp('555177777777', 'Cesta Gourmet')">Falar no WhatsApp</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kits de Natal. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openWhatsApp(phoneNumber, basketName) {
+            const url = `https://wa.me/${phoneNumber}?text=Olá, gostaria de informações sobre a ${encodeURIComponent(basketName)}.`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
